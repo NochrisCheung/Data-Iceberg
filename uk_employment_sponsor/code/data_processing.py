@@ -1,13 +1,13 @@
 import pandas as pd
 import plotly.graph_objects as go
-import plotly.express as px
 import plotly.io as pio
+import os
+
 pio.kaleido.scope.default_format = 'png'
 
-mydir = '/Users/nochris/Documents/Job_Market'
+cwd = os.path.dirname(os.path.realpath(__file__))
 
-
-sponsor_df = pd.read_csv(mydir + '/UKTiersponsors_All.csv')
+sponsor_df = pd.read_csv(cwd + '/../data_source/UKTiersponsors_All.csv')
 
 sponsor_df['Date Added'] = pd.to_datetime(sponsor_df['Date Added'])
 sponsor_by_tier_type_by_month = sponsor_df.pivot_table(values = 'Town', index= 'Date Added', columns = 'Main Tier', aggfunc = 'count').groupby(pd.Grouper(freq = 'q', closed = 'left',label = 'left')).sum()
@@ -46,12 +46,11 @@ fig.add_trace(
     )
 )
 
-# Confiure text font
+# Configure font
 fig.update_layout(
-    titlefont = dict(
-        color = 'darkslateblue',
-        size = 23
-    )
+    font = dict(
+        size = 15,
+        )
 )
 
 fig.update_traces(
@@ -66,8 +65,8 @@ fig.update_traces(
 
 #  Define the graph layout
 fig.update_layout(
-    width = 500,
-    height = 500,
+    width = 700,
+    height = 700,
     plot_bgcolor = 'aliceblue',
     paper_bgcolor = 'aliceblue',
     # template = 'simple_white')
@@ -79,9 +78,6 @@ fig.update_layout(
         showline = False,
         showgrid = False,
         zeroline = False,
-        titlefont = dict(
-            size = 12
-        )
     ),
     yaxis = dict(
         showline = False,
@@ -90,22 +86,19 @@ fig.update_layout(
 
         gridwidth = 1,
         gridcolor = 'lightsteelblue',
-
-        titlefont = dict(
-            size = 12
-        )
     )
 )
 
 fig.update_layout(
     margin=dict(
-        l=30,
+        l=60,
         r=30,
-        b=40,
-        t=150,
+        b=60,
+        t=180,
         pad = 5
     )
 )
 
+
 fig.to_image(engine = 'kaleido')
-fig.write_image(mydir + '/image.png')
+fig.write_image(cwd + '/../data_processed/year_by_quarter_vs_num_of_new_t2_sponsors.png')
