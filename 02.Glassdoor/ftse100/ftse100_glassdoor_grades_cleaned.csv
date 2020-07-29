@@ -1,0 +1,101 @@
+,company_name,rating,review_count,used_review_count,used_review%,,,
+0,BAE Systems USA,3.6,2200,1983,90.14%,BAE Systems,baesystems.com,Aerospace & Defence
+1,Rolls-Royce,4,1904,425,22.32%,Rolls-Royce Holdings,www.rolls-royce.com,Aerospace & Defence
+2,Barclays Wealth Management,3.8,8074,7192,89.08%,Barclays,www.barclays.co.uk,Banks
+3,HSBC Holdings,3.7,13361,11835,88.58%,HSBC,www.hsbc.com,Banks
+4,Lloyds Banking Group,3.8,2612,2114,80.93%,Lloyds Banking Group,www.lloydsbankinggroup.com,Banks
+5,Royal Bank of Scotland,3.8,4109,3721,90.56%,Royal Bank of Scotland Group,www.rbs.com,Banks
+6,Standard Chartered Bank,3.7,3422,2999,87.64%,Standard Chartered,www.sc.com,Banks
+7,Croda,3.6,115,101,87.83%,Croda International,www.croda.com,Chemicals
+8,Johnson Matthey,3.3,462,414,89.61%,Johnson Matthey,www.matthey.com,Chemicals
+9,CRH,3.3,307,284,92.51%,CRH plc,www.crh.ie,Construction & Materials
+10,Homeserve,4.3,839,818,97.50%,Homeserve,www.homeserveplc.com,Consumer services
+11,Halma,4,27,26,96.30%,Halma plc,www.halma.com,Electronic & Electrical Equipment
+12,SSE,3.4,543,505,93.00%,SSE plc,www.sse.com,Energy & Utilities
+13,National Grid,3.6,1001,818,81.72%,National Grid plc,www.nationalgrid.com,Energy & Utilities
+14,Severn Trent,4.2,237,226,95.36%,Severn Trent,www.severntrent.com,Energy & Utilities
+15,United Utilities,4.5,119,104,87.39%,United Utilities,www.unitedutilities.com,Energy & Utilities
+16,Pennon,3,3,3,100.00%,Pennon Group,www.pennon-group.co.uk,Energy & Utilities
+17,Coca-Cola HBC,3.6,338,298,88.17%,Coca-Cola Hellenic Bottling Company,coca-colahellenic.com,Food & Beverages
+18,Diageo,3.9,1603,1493,93.14%,Diageo,www.diageo.com,Food & Beverages
+19,Associated British Foods,3.9,38,38,100.00%,Associated British Foods,www.abf.co.uk,Food & Beverages
+20,Morrisons,3.3,1781,1706,95.79%,Morrisons,morrisons.com,Food & Drug Retailers
+21,Ocado Group,3.5,573,557,97.21%,Ocado,www.ocadogroup.com,Food & Drug Retailers
+22,J Sainsbury,3.6,4635,4501,97.11%,Sainsbury's,http://www.sainsburys.co.uk/,Food & Drug Retailers
+23,Tesco,3.7,7608,7204,94.69%,Tesco,www.tescoplc.com,Food & Drug Retailers
+24,Mondi Group,3.4,87,83,95.40%,Mondi,www.mondigroup.com,Forestry & Paper
+25,Melrose Industries,,,,,Melrose Industries,www.melroseplc.net,General Industrials
+26,DS Smith,3.5,155,143,92.26%,DS Smith,www.dssmith.com,General Industrials
+27,Smiths Group,3.7,50,43,86.00%,Smiths Group,smiths.com,General Industrials
+28,Smurfit Kappa,3.5,223,201,90.13%,Smurfit Kappa,www.smurfitkappa.com,General Industrials
+29,Spirax Sarco,4.2,101,89,88.12%,Spirax-Sarco Engineering,www.spiraxsarcoengineering.com,General Industrials
+30,JD Sports Fashion,2.9,945,901,95.34%,JD Sports,www.jdsports.co.uk,General Retailers
+31,next,3.5,2483,2251,90.66%,Next plc,www.next.co.uk,General Retailers
+32,Kingfisher,3.4,156,133,85.26%,Kingfisher plc,www.kingfisher.com,General Retailers
+33,Smith & Nephew,3.2,828,785,94.81%,Smith & Nephew,www.smith-nephew.com,"HealthCare, Pharmaceuticals & Biotechnology"
+34,AstraZeneca,4,3133,2825,90.17%,AstraZeneca,www.astrazeneca.com,"HealthCare, Pharmaceuticals & Biotechnology"
+35,GlaxoSmithKline,3.9,5890,4966,84.31%,GlaxoSmithKline,www.gsk.com,"HealthCare, Pharmaceuticals & Biotechnology"
+36,Hikma,3.3,229,202,88.21%,Hikma Pharmaceuticals,www.hikma.com,"HealthCare, Pharmaceuticals & Biotechnology"
+37,Whitbread,3.3,532,502,94.36%,Whitbread,www.whitbread.co.uk,"Hospitality, Travel & Leisure"
+38,,,,,,Flutter Entertainment,www.flutter.com,"Hospitality, Travel & Leisure"
+39,InterContinental Hotels Group,3.9,2433,145,5.96%,InterContinental Hotels Group,www.ihgplc.com,"Hospitality, Travel & Leisure"
+40,International Airlines Group,2.3,36,32,88.89%,International Airlines Group,www.iairgroup.com,"Hospitality, Travel & Leisure"
+41,GVC Group,3.4,407,386,94.84%,GVC Holdings,www.gvc-plc.com,"Hospitality, Travel & Leisure"
+42,Barratt Developments,4.6,109,58,53.21%,Barratt Developments,www.barrattdevelopments.co.uk,Household Goods & Home Construction
+43,Berkeley Group,2.7,133,120,90.23%,Berkeley Group Holdings,www.berkeleygroup.co.uk,Household Goods & Home Construction
+44,Persimmon,3.6,113,110,97.35%,Persimmon plc,www.persimmonhomes.com,Household Goods & Home Construction
+45,RB,3.5,2093,1849,88.34%,Reckitt Benckiser,www.rb.com,Household Goods & Home Construction
+46,Taylor Wimpey,4.7,328,319,97.26%,Taylor Wimpey,www.taylorwimpey.co.uk,Household Goods & Home Construction
+47,EVRAZ,2.9,27,23,85.19%,Evraz,www.evraz.com,Industrial Metals & Mining
+48,Polymetal,5,1,1,100.00%,Polymetal International,www.polymetalinternational.com,Industrial Metals & Mining
+49,Aviva,3.5,1093,932,85.27%,Aviva,www.aviva.com,Insurance
+50,Legal & General,3.8,277,256,92.42%,Legal & General,www.legalandgeneralgroup.com,Insurance
+51,Phoenix Group,3.7,44,37,84.09%,Phoenix Group,www.thephoenixgroup.com,Insurance
+52,Prudential plc,3.3,339,278,82.01%,Prudential plc,www.prudentialplc.com,Insurance
+53,St. James's Place Wealth Management,4.2,155,59,38.06%,St. James's Place plc,www.sjp.co.uk,Insurance
+54,Admiral Group,3.6,232,228,98.28%,Admiral Group,www.admiralgroup.co.uk,Insurance
+55,RSA Group,3.3,491,452,92.06%,RSA Insurance Group,www.rsagroup.com,Insurance
+56,Baillie Gifford,4.1,56,42,75.00%,Scottish Mortgage Investment Trust,www.scottishmortgageit.com,Investment and Financial Services
+57,M&G,3.4,348,348,100.00%,M&G,www.global.mandg.com,Investment and Financial Services
+58,3i Group,3.7,33,30,90.91%,3i,www.3i.com,Investment and Financial Services
+59,Hargreaves Lansdown,4.1,120,107,89.17%,Hargreaves Lansdown,www.hl.co.uk,Investment and Financial Services
+60,London Stock Exchange Group,3.2,201,167,83.08%,London Stock Exchange Group,www.lseg.com,Investment and Financial Services
+61,Schroders,3.8,328,267,81.40%,Schroders,www.schroders.com,Investment and Financial Services
+62,Standard Life Aberdeen,3.1,383,329,85.90%,Standard Life Aberdeen,www.standardlifeaberdeen.com,Investment and Financial Services
+63,Intermediate Capital,4.5,6,6,100.00%,Intermediate Capital Group,www.icgam.com,Investment and Financial Services
+64,Auto Trader UK,4.6,294,289,98.30%,Auto Trader Group,www.autotrader.co.uk,Media
+65,Informa,3.2,744,704,94.62%,Informa,informa.com,Media
+66,ITV,4,258,197,76.36%,ITV plc,itvplc.com,Media
+67,Pearson,3.2,4442,4011,90.30%,Pearson plc,www.pearson.com,Media
+68,RELX,3.7,410,383,93.41%,RELX,RELX.com,Media
+69,Rightmove,3.4,104,102,98.08%,Rightmove,www.rightmove.co.uk,Media
+70,WPP,3.3,371,330,88.95%,WPP plc,WPP.com,Media
+71,Anglo American,4,517,477,92.26%,Anglo American plc,www.angloamerican.com,Mining
+72,Antofagasta,3.4,6,6,100.00%,Antofagasta PLC,Antofagasta.co.uk,Mining
+73,BHP,3.9,1079,978,90.64%,BHP,www.bhp.com,Mining
+74,Fresnillo,3.7,28,27,96.43%,Fresnillo plc,www.fresnilloplc.com,Mining
+75,Glencore,3.9,302,248,82.12%,Glencore,www.glencore.com,Mining
+76,Rio Tinto,3.9,985,868,88.12%,Rio Tinto (corporation),www.riotinto.com,Mining
+77,BP,3.7,3750,516,13.76%,BP,www.bp.com,Oil & Gas Producers
+78,Shell,3.9,5804,308,5.31%,Royal Dutch Shell,www.shell.com,Oil & Gas Producers
+79,Burberry,3.5,959,876,91.35%,Burberry,www.burberryplc.com,Personal Goods
+80,Unilever,4,6825,5743,84.15%,Unilever,www.unilever.com,Personal Goods
+81,British Land Company,3.8,20,20,100.00%,British Land,www.britishland.com,Real Estate Investment Trusts
+82,Landsec,4,30,26,86.67%,Landsec,www.landsec.com,Real Estate Investment Trusts
+83,SEGRO,3,5,5,100.00%,Segro,www.segro.com,Real Estate Investment Trusts
+84,AVEVA,3.6,259,247,95.37%,Aveva,www.aveva.com,Software & Computer Services
+85,Sage,4.2,2510,2418,96.33%,Sage Group,Sage.com,Software & Computer Services
+86,Avast,3.8,148,136,91.89%,Avast,www.avast.com/index,Software & Computer Services
+87,Just Eat,4.1,370,333,90.00%,Just Eat Takeaway,corporate.takeaway.com,Software & Computer Services
+88,Ashtead Group,,,,,Ashtead Group,www.ashtead-group.com,Support Services
+89,Bunzl,2.5,117,107,91.45%,Bunzl,bunzl.com,Support Services
+90,Compass Group,3.4,2084,1911,91.70%,Compass Group,www.compass-group.com,Support Services
+91,DCC,3.2,17,17,100.00%,DCC plc,www.dcc.ie,Support Services
+92,Experian,4.2,3000,2857,95.23%,Experian,www.experian.com,Support Services
+93,Ferguson,3.3,1100,1037,94.27%,Ferguson plc,www.fergusonplc.com,Support Services
+94,Intertek,2.7,1154,1076,93.24%,Intertek,www.intertek.com,Support Services
+95,Rentokil Initial,4.2,698,684,97.99%,Rentokil Initial,www.rentokil-initial.com,Support Services
+96,BT Group,3.6,4200,3990,95.00%,BT Group,www.bt.com/about,Telecommunications
+97,Vodafone,3.8,7035,6459,91.81%,Vodafone,www.vodafone.com,Telecommunications
+98,British American Tobacco,3.8,1514,1302,86.00%,British American Tobacco,www.bat.com,Tobacco
+99,Imperial Brands,3.4,225,210,93.33%,Imperial Brands,www.imperialbrandsplc.com,Tobacco

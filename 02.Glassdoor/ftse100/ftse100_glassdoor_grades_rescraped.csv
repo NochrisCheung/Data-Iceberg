@@ -1,0 +1,24 @@
+,company_name,rating,review_count,used_review_count
+0,AstraZeneca,4.0,3133.0,2825
+1,Aviva,3.5,1093.0,932
+2,BAE Systems USA,3.6,2220.0,1983
+3,Barclays Wealth Management,3.0,"<span class=""num h2""> 2</span>",2
+4,BHP,3.9,1079.0,978
+5,BP,3.7,3750.0,516
+6,British American Tobacco,3.8,1514.0,1302
+7,Compass Group,3.4,2084.0,1911
+8,Diageo,3.9,1603.0,1493
+9,GlaxoSmithKline,3.9,5890.0,4966
+10,HSBC Holdings,3.7,13361.0,11835
+11,InterContinental Hotels Group,3.9,2433.0,145
+12,Intertek,2.7,1154.0,1076
+13,Lloyds Banking Group,3.8,2612.0,2114
+14,next,3.5,2483.0,2251
+15,Pearson,3.2,4442.0,4011
+16,RB,3.5,2093.0,1849
+17,Rolls-Royce,4.0,1902.0,425
+18,Shell,3.9,5804.0,308
+19,Sage,4.2,2510.0,2418
+20,Standard Chartered Bank,3.7,3422.0,2999
+21,Unilever,4.0,6825.0,5743
+22,Vodafone,3.8,7035.0,6459
