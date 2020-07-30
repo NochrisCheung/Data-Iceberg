@@ -2,19 +2,21 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.io as pio
 import os
+import uk_employment_sponsor.code.chart_format_config
 
-pio.kaleido.scope.default_format = 'png'
+# from .chart_format_config import *
 
-cwd = os.path.dirname(os.path.realpath(__file__))
+pio.kaleido.scope.default_format = 'svg'
 
-sponsor_df = pd.read_csv(cwd + '/../data_source/UKTiersponsors_All.csv')
+cwd = os.path.dirname(os.path.realpath('__file__'))
+
+sponsor_df = pd.read_csv(cwd + '/uk_employment_sponsor/data_source/UKTiersponsors_All.csv')
 
 sponsor_df['Date Added'] = pd.to_datetime(sponsor_df['Date Added'])
 sponsor_by_tier_type_by_month = sponsor_df.pivot_table(values = 'Town', index= 'Date Added', columns = 'Main Tier', aggfunc = 'count').groupby(pd.Grouper(freq = 'q', closed = 'left',label = 'left')).sum()
 
 tier_2_columns = [col for col in sponsor_by_tier_type_by_month.columns if 'Tier 2' in col]
 tier_2_sponsor_by_quarter = sponsor_by_tier_type_by_month[tier_2_columns].sum(axis = 1)
-
 
 fig = go.Figure()
 
@@ -49,7 +51,8 @@ fig.add_trace(
 # Configure font
 fig.update_layout(
     font = dict(
-        size = 15,
+        size = 16,
+        family = 'Oswald'
         )
 )
 
@@ -62,43 +65,7 @@ fig.update_traces(
     )
     # textposition='middle left'
 )
+chart_format_config.configure_chart(fig)
 
-#  Define the graph layout
-fig.update_layout(
-    width = 700,
-    height = 700,
-    plot_bgcolor = 'aliceblue',
-    paper_bgcolor = 'aliceblue',
-    # template = 'simple_white')
-)
-
-# Definte x-axis and y-axis layout
-fig.update_layout(
-    xaxis = dict(
-        showline = False,
-        showgrid = False,
-        zeroline = False,
-    ),
-    yaxis = dict(
-        showline = False,
-        showgrid = True,
-        zeroline = False,
-
-        gridwidth = 1,
-        gridcolor = 'lightsteelblue',
-    )
-)
-
-fig.update_layout(
-    margin=dict(
-        l=60,
-        r=30,
-        b=60,
-        t=180,
-        pad = 5
-    )
-)
-
-
-fig.to_image(engine = 'kaleido')
-fig.write_image(cwd + '/../data_processed/year_by_quarter_vs_num_of_new_t2_sponsors.png')
+# fig.to_image(engine = 'kaleido')
+# fig.write_image(cwd + '/../data_processed/year_by_quarter_vs_num_of_new_t2_sponsors.svg')
