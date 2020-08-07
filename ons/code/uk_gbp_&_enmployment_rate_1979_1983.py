@@ -89,7 +89,7 @@ fig.update_layout(
 
 fig.update_layout(
     margin=dict(
-        l=60,
+        l=70,
         r=10,
         b=60,
         t=180,

@@ -6,8 +6,8 @@ from visualisation_toolkit import chart_format_config as cfc
 gdp_df = pd.read_csv('./ons/data_source/uk_gdp-030820.csv')
 unemployment_df = pd.read_csv('./ons/data_source/uk_unemployment_rate-030820.csv')
 
-start_period = '2006 Q1'
-end_period = '2016 Q4'
+start_period = '1977 Q1'
+end_period = '2020 Q1'
 
 
 # Process GDP data
@@ -21,6 +21,11 @@ gdp_by_quarter_df.iloc[gdp_period_index[0]: gdp_period_index[1]]
 
 gdp_by_quarter_df['Period'] = gdp_by_quarter_df['Period'].str.replace(' ', '-')
 gdp_by_quarter_df['Period'] = pd.PeriodIndex(gdp_by_quarter_df['Period'].values, freq='Q').to_timestamp()
+gdp_by_quarter_df[gdp_by_quarter_df['GDP'] >= gdp_by_quarter_df.iloc[212,1]].head(50)
+gdp_by_quarter_df.iloc[97,1]
+gdp_by_quarter_df.iloc[90:].head(50)
+
+gdp_recovery_period = [12, 11, 21]
 
 # Process unemployment rate data
 unemployment_by_quarter_df = unemployment_df[unemployment_df['Title'].str.contains('Q')]
@@ -32,70 +37,86 @@ unemployment_period_index = unemployment_by_quarter_df.index[(unemployment_by_qu
 unemployment_by_quarter_df['Period'] = unemployment_by_quarter_df['Period'].str.replace(' ', '-')
 unemployment_by_quarter_df['Period'] = pd.PeriodIndex(unemployment_by_quarter_df['Period'].values, freq='Q').to_timestamp()
 
+unemployment_by_quarter_df[unemployment_by_quarter_df['Employment Rate'] >= unemployment_by_quarter_df.iloc[150,2]].head(50)
+unemployment_by_quarter_df.tail(50)
+
+employment_rate_recovery_period = [44, 28, 31]
+
+[sum(gdp_recovery_period)/len(gdp_recovery_period)]
+[sum(employment_rate_recovery_period)/len(employment_rate_recovery_period)]
 
 colorscale = ['lightskyblue','steelblue', 'navy', 'darkslateblue','indigo']
+
 fig = make_subplots(specs = [[{'secondary_y': True}]])
 cfc.configure_chart(fig)
 
 fig.add_trace(
-    go.Scatter(
-        name = 'GDP',
-        x = gdp_by_quarter_df.iloc[gdp_period_index[0]: gdp_period_index[1]]['Period'],
-        y = gdp_by_quarter_df.iloc[gdp_period_index[0]: gdp_period_index[1]]['GDP'],
-        mode = 'lines',
-        line = dict(
-            shape = 'spline',
-            color = colorscale[0],
-            width = 3,
+    go.Bar(
+        name = 'Employement Rate',
+        x = [float(em_rate) for em_rate in employment_rate_recovery_period] + [sum(employment_rate_recovery_period)/len(employment_rate_recovery_period)],
+        y = [3, 2, 1, 0],
+        orientation = 'h',
+        # width = 0.3,
+        marker = dict(
+            # shape = 'spline',
+            color = colorscale[4]
+            # colorscale =
+            # width = 3,
         )
     ),
-    secondary_y = False
 )
 
 fig.add_trace(
-    go.Scatter(
-        name = 'Employement Rate',
-        x = unemployment_by_quarter_df.iloc[unemployment_period_index[0]: unemployment_period_index[1]]['Period'],
-        y = unemployment_by_quarter_df.iloc[unemployment_period_index[0]: unemployment_period_index[1]]['Employment Rate'],
-        mode = 'lines',
-        line = dict(
-            shape = 'spline',
-            color = colorscale[4],
-            width = 3,
+    go.Bar(
+        name = 'GDP',
+        x = [float(gdp) for gdp in gdp_recovery_period] + [sum(gdp_recovery_period)/len(gdp_recovery_period)],
+        y = [3, 2, 1, 0],
+        orientation = 'h',
+        # width = 0.3,
+        marker = dict(
+            # shape = 'spline',
+            color = colorscale[0]
+            # colorscale =
+            # width = 3,
         )
     ),
-    secondary_y = True
+    # secondary_y = False
 )
+
 
 fig.update_layout(
     showlegend= False,
     xaxis=dict(
-        showticklabels=True
+        showticklabels=True,
+        zeroline = True,
+        showgrid = True,
+        dtick = 12,
+
+        gridcolor = 'lightsteelblue',
+        gridwidth = 1,
+
+        zerolinecolor = 'lightsteelblue',
+
+        range = [0, 49]
         ),
-    yaxis1=dict(
-        type='linear',
-        range=[419.8*10**9, 504*10**9],
-        dtick = 20*10**9
-        ),
-    yaxis2 = dict(
+    yaxis = dict(
         type = 'linear',
-        range = [90.98, 95.18],
-        dtick = 1,
         showline = False,
         showgrid = False,
         zeroline = False,
-        showticklabels=True
-        )
+        showticklabels = False,
+        ),
+    # bargroupgap = 0
 )
 
 fig.update_layout(
     margin=dict(
-        l=60,
+        l=100,
         r=10,
-        b=60,
+        b=6 0,
         t=180,
         pad = 5
     )
 )
 
-fig.write_image('./ons/data_processed/uk_gdp_employment_rate_2008_to_2013.svg')
+fig.write_image('./ons/data_processed/uk_gdp_employment_rate_cycle_period.svg')
