@@ -1,8 +1,10 @@
 import plotly.graph_objects as go
 import plotly.io as pio
 
-def configure_chart(fig):
+def configure_chart():
     #  Define the graph layout
+    fig = go.Figure()
+
     fig.update_layout(
         width = 700,
         height = 700,
@@ -45,3 +47,5 @@ def configure_chart(fig):
             family = 'Oswald'
             )
     )
+
+    return fig

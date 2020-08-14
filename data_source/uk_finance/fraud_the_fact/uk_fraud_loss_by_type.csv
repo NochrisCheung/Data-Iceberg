@@ -1,0 +1,22 @@
+Fraud Category,Fraud Typology,Loss Value,Report Volume,Year
+Card fraud,"Remote purchase (Card-not-present) fraud (internet, telephone, mail order)",£470.2m,"2,157,418.00",2019
+Card fraud,Counterfeit card fraud,£12.8m,"65,907.00",2019
+Card fraud,Lost and stolen card fraud,£94.8m,"460,142.00",2019
+Card fraud,Card ID theft,£37.7m,"54,165.00",2019
+Card fraud,Card not received fraud,£5.2m,"7,907.00",2019
+Card fraud,UK retail face-to-face card fraud losses,£64.3m,,2019
+Card fraud,Internet/e-commerce fraud,£359.3m,,2019
+Card fraud,Card fraud at UK cash machines,£30.0m,,2019
+Card fraud,Card fraud abroad,£170.7m,,2019
+Cheque fraud,Cheque related fraud,£53.6m,"2,852.00",2019
+Unauthorised remote banking fraud,Internet banking fraud,£111.8m,"25,849.00",2019
+Unauthorised remote banking fraud,Telephone banking fraud,£23.6m,"11,185.00",2019
+Unauthorised remote banking fraud,Mobile banking fraud,£15.2m,"6,872.00",2019
+Authorised push payment (APP) fraud,Purchase scams,£59.0m,"73,336.00",2019
+Authorised push payment (APP) fraud,Investment scams,£95.4m,"6,789.00",2019
+Authorised push payment (APP) fraud,Romance scams,£18.1m,"2,163.00",2019
+Authorised push payment (APP) fraud,Advance fee scams,£17.2m,"10,711.00",2019
+Authorised push payment (APP) fraud,Invoice and mandate scams,£114.1m,"8,572.00",2019
+Authorised push payment (APP) fraud,CEO fraud,£17.8m,676.00,2019
+Authorised push payment (APP) fraud,Impersonation: police / bank staff,£84.1m,"11,088.00",2019
+Authorised push payment (APP) fraud,Impersonation: other,£50.2m,"9,102.00",2019
