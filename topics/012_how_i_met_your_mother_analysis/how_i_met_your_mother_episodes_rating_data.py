@@ -4,7 +4,7 @@ import numpy as np
 import plotly.graph_objects as go
 import visualisation_toolkit.chart_format_config as cfc
 ia = IMDb()
-ia.get_movie_infoset()·
+ia.get_movie_infoset()
 # check series how i met your mother
 series = ia.get_movie('0460649')
 

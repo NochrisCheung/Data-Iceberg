@@ -7,7 +7,23 @@ from sklearn.cluster import KMeans
 whisky_df = pd.read_csv('./data_source/selfbuilt_whisky_analysis/whisky_database/Meta-Critic Whisky Database – Selfbuilts Whisky Analysis.csv')
 
 
-whisky_df
+whisky_df.columns
+
+whisky_df['Super Cluster'].unique()
+whisky_df['Cluster'].unique()
+fig = cfc.configure_chart()
+
+fig.add_trace(
+    go.Scatter(
+        x = np.arange(1,7),
+        y = whisky_df.groupby('Cost')['Meta Critic'].median().to_list(),
+        mode = 'markers'
+
+    )
+)
+
+
+
 
 X = whisky_df[['Meta Critic','Cost','Class','Country','Type']]
 X
@@ -18,6 +34,8 @@ country_list = X['Country'].unique().tolist()
 X['Country'] = [country_list.index(c) for c in X['Country']]
 type_list = X['Type'].unique().tolist()
 X['Type'] = [type_list.index(t) for t in X['Type']]
+
+X
 
 kmeans = KMeans(n_clusters = 5, random_state = 0).fit(X)
 
