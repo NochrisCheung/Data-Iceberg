@@ -16,3 +16,16 @@ fig.update_traces(
         colorscale = ['lightskyblue','steelblue', 'navy', 'darkslateblue','indigo','white'],
     )
 )
+
+color_scheme = [
+    '65,105,225',
+    '127,255,212',
+    '144,238,144',
+    '240,230,140',
+    '255,160,122',
+    '205,92,92',
+    '219,112,147',
+    '186,85,211',
+    '147,112,219',
+    '33,33,33'
+]
