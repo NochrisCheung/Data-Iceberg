@@ -12,6 +12,7 @@ series = ia.get_movie('0460649')
 all_ratings_df = pd.DataFrame(columns = ['Season','Episode','Rating'])
 ia.update(series,'episodes')
 
+seasons = series['episodes'].keys()
 for s in seasons:
     episodes = series['episodes'][s].keys()
     all_ratings = [series['episodes'][s][e]['rating'] for e in episodes]
