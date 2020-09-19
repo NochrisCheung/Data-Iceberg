@@ -1,0 +1,7 @@
+Age,Usage;
+Less than 30,0.6;
+30 to 49,1;
+50 to 64,1;
+65 to 74,0.9;
+75 or over,0.5;
+All household,0.9;
