@@ -1,0 +1,7 @@
+Length,Count
+No more than 1-2 dates,0.237
+Less than 6 months,0.145
+Between 6 months to 1 year,0.072
+Longer than 1 year,0.147
+Married or Engaged,0.136
+Other,0.263
