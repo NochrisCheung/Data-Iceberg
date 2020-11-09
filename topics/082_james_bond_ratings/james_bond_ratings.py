@@ -46,45 +46,75 @@ color_scheme = [
     '147,112,219',
     '33,33,33',
 ]
+actor_list.reverse()
+actor_list
 
 fig = cfc.configure_chart()
+for act in actor_list:
+    fig.add_trace(
+        go.Scatter(
+            name = act,
+            x = series[series['actor'] == act]['rating'],
+            y = series[series['actor'] == act]['actor'],
+            mode = 'markers+lines',
+            # y = [ n +' - '+ str(y) for n, y in zip(series['name'],series['year'])],
+            marker = dict(
+                line = dict(
+                    width = 1,
+                    color = ['rgb('+color_scheme[-1]+')' for a in series[series['actor'] == act]['actor']]
+                ),
+                color = ['rgb('+color_scheme[actor_list.index(a)]+')' for a in series[series['actor'] == act]['actor']],
+                size = 10
+            ),
+            line = dict(
+                color = 'rgb('+color_scheme[actor_list.index(act)]+')'
+            ),
+            # width = 1,
+            orientation = 'h',
+        )
+    )
+
+
 fig.add_trace(
-    go.Bar(
-        name = str(s),
-        x = X[0],
-        y = Y[0],
+    go.Scatter(
+        name = 'Average',
+        x = series.groupby('actor').mean()['rating'].values,
+        y = series.groupby('actor').mean()['rating'].index,
+        mode = 'markers',
         marker = dict(
-            color = 'rgb('+color_scheme[s-1]+')'
+            line = dict(
+                width = 1,
+                color = ['rgb('+color_scheme[-1]+')' for a in series[series['actor'] == act]['actor']]
+            ),
+            color = ['rgb('+color_scheme[-1]+')' for a in series[series['actor'] == act]['actor']],
+            size = 10
         ),
-        width = 1,
+        orientation = 'h',
     )
 )
-
-episodes = series['episodes'][10].keys()
-X = ['10:0'] + ['10:'+str(e) for e in episodes],
-Y = pd.Series([0]).append(all_ratings_df[all_ratings_df['Season'] == 10]['Rating'], ignore_index = True),
-fig.add_trace(
-    go.Bar(
-        name = '10',
-        x = X[0],
-        y = Y[0],
-        marker = dict(
-            color = 'rgb('+color_scheme[10-1]+')'
-        ),
-        width = 1,
-    )
-)
-
 
 fig.show()
+
+# fig.add_trace(
+#     go.Bar(
+#         x = [ n +' - '+ str(y) for n, y in zip(series['name'],series['year'])],
+#         y = series['rating'],
+#         marker = dict(
+#             color = ['rgb('+color_scheme[actor_list.index(a)]+')' for a in series['actor']]
+#         ),
+#         width = 1,
+#     )
+# )
+
 fig.update_layout(
     showlegend = False,
-    yaxis = dict(
-        range = [5, 10],
+    xaxis = dict(
+        range = [5, 9],
         showgrid = False
     ),
-    xaxis = dict(
-        showticklabels=True
+    yaxis = dict(
+        showticklabels=True,
+        showgrid = False
     )
 )
 
@@ -105,4 +135,36 @@ fig.update_layout(
     )
 )
 
-fig.write_image('./topics/075_big_bang_theory_rating/data_processed/big_bang_theory_ratings.svg')
+fig.write_image('./topics/082_james_bond_ratings/data_processed/james_bond_ratings.svg')
+
+
+fig2 = cfc.configure_chart()
+fig2.add_trace(
+    go.Bar(
+        x = [ n +' - '+ str(y) for n, y in zip(series['name'],series['year'])],
+        y = series['rating'],
+        marker = dict(
+            color = ['rgb('+color_scheme[actor_list.index(a)]+')' for a in series['actor']]
+        ),
+        width = 1,
+    )
+)
+
+fig2.update_layout(
+    yaxis = dict(
+        range = [4,8],
+        showgrid = False
+    )
+)
+
+fig2.update_layout(
+    margin=dict(
+        l=52,
+        r=25,
+        b=60,
+        t=180,
+        pad = 5
+    )
+)
+
+fig2.write_image('./topics/082_james_bond_ratings/data_processed/james_bond_ratings_by_moveis.svg')
